@@ -1,0 +1,17 @@
+http://0.0.0.0:8080/about.html
+http://0.0.0.0:8080/contact.html
+http://0.0.0.0:8080/index.html
+http://0.0.0.0:8080/map.html
+http://0.0.0.0:8080/products.html
+http://0.0.0.0:8080/wristbands.html
+http://0.0.0.0:8080/products/lanyards.html
+http://0.0.0.0:8080/products/pvc.html
+http://0.0.0.0:8080/products/termo.html
+http://0.0.0.0:8080/wristbands/holographic.html
+http://0.0.0.0:8080/wristbands/multitab.html
+http://0.0.0.0:8080/wristbands/plastic.html
+http://0.0.0.0:8080/wristbands/silicone.html
+http://0.0.0.0:8080/wristbands/textile.html
+http://0.0.0.0:8080/wristbands/tyvek.html
+http://0.0.0.0:8080/wristbands/ultimoid.html
+http://0.0.0.0:8080/wristbands/vinyl.html
