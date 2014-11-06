@@ -258,7 +258,7 @@
 					success: function(msg) {
 
 						if (msg == 'OK') {
-							result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>The message has been sent!</div>';
+							result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
 							$('#contact-form').clearForm();
 						} else {
 							result = '<div class="alert error"><i class="fa fa-times-circle"></i>' + msg + '</div>';
@@ -268,7 +268,7 @@
 					},
 					error: function() {
 
-						result = '<div class="alert error"><i class="fa fa-times-circle"></i>There was an error sending the message!</div>';
+						result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
 						$("#formstatus").html(result);
 
 					}
