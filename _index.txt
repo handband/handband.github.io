@@ -5,8 +5,10 @@ http://0.0.0.0:8080/map.html
 http://0.0.0.0:8080/products.html
 http://0.0.0.0:8080/wristbands.html
 http://0.0.0.0:8080/products/lanyards.html
+http://0.0.0.0:8080/products/perrito.html
 http://0.0.0.0:8080/products/pvc.html
 http://0.0.0.0:8080/products/termo.html
+http://0.0.0.0:8080/products/yoyo.html
 http://0.0.0.0:8080/wristbands/holographic.html
 http://0.0.0.0:8080/wristbands/multitab.html
 http://0.0.0.0:8080/wristbands/plastic.html
