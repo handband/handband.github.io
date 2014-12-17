@@ -1,4 +1,5 @@
 http://0.0.0.0:8080/about.html
+http://0.0.0.0:8080/acreditacion.html
 http://0.0.0.0:8080/contact.html
 http://0.0.0.0:8080/index.html
 http://0.0.0.0:8080/map.html

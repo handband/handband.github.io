@@ -447,6 +447,14 @@
 
 	});
 
+	$('.bxslider').bxSlider({
+		mode: 'horizontal',
+		captions: false,
+		auto: true,
+		autoControls: false,
+		speed: 100
+	});
+
 
 })(window.jQuery);
 
