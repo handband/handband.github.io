@@ -107,3 +107,66 @@
 	.fullwidthbanner-container .fullwidthabnner { max-height: 245px !important; }
 
 }
+
+.acreditacionbannercontainer {
+  max-height: 300px !important;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+.acreditacionbannercontainer ul { list-style: none; }
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  .acreditacionbannercontainer,
+  .acreditacionbannercontainer .acreditacionbanner { max-height: 300px !important; }
+
+}
+
+@media (max-width: 767px) {
+
+  .acreditacionbannercontainer,
+  .acreditacionbannercontainer .acreditacionbanner { max-height: 160px !important; }
+
+  .tp-leftarrow.default,
+  .tp-rightarrow.default { display: none; }
+
+  .tp-bullets { bottom: 20px !important; }
+
+  .acreditacionbanner .caption a.btn.btn-large {
+    padding: 3px 10px;
+    font-size: 10px;
+  }
+
+  .acreditacionbanner .caption.icons i {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+  .acreditacionbannercontainer,
+  .acreditacionbannercontainer .acreditacionbanner { max-height: 245px !important; }
+
+}
+
+.acreditacionbanner .caption.title.white{
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.acreditacionbanner .caption.title {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 300;
+  color: #444;
+}
