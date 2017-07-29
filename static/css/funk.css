@@ -1,0 +1,20 @@
+/**
+Some custom styles for tweaking stuff
+
+- Marco
+**/
+
+span.header-links:not(:first-child){
+    border-left:1px solid #fff;
+}
+span.header-links{
+    padding-left:10px;
+    padding-right:10px;
+}
+span.header-links>a{
+    text-decoration: none;
+}
+
+.slider-logo{
+    width: 200px;
+}
