@@ -254,7 +254,7 @@
 				var result;
 				$(form).ajaxSubmit({
 					type: "POST",
-					url: "https://www.enformed.io/30tc1ato",
+					url: "http://contact_mailer.handband.cl",
 					success: function(msg) {
 						console.log("success!")
 						console.log(msg)

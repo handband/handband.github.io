@@ -221,7 +221,7 @@
 				scrollwheel: false,
 				zoom: 17,
 				markers: [{
-						address: 'Monseñor Felix Cabrera 66, Providencia',
+						address: 'HandBand, Providencia',
 						html: '',
 						popup: false
 					}
