@@ -16,7 +16,6 @@ http://0.0.0.0:8080/lanyards/simple.html
 http://0.0.0.0:8080/lanyards/sublimados.html
 http://0.0.0.0:8080/wristbands/holographic.html
 http://0.0.0.0:8080/wristbands/multitab.html
-http://0.0.0.0:8080/wristbands/plastic.html
 http://0.0.0.0:8080/wristbands/rfid.html
 http://0.0.0.0:8080/wristbands/silicone.html
 http://0.0.0.0:8080/wristbands/textile.html
