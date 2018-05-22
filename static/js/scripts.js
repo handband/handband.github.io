@@ -231,7 +231,7 @@
 					required: false
 				},
 				tel: {
-					required: false
+					required: true
 				},
 				message: {
 					required: true
@@ -240,6 +240,9 @@
 			messages: {
 				name1: {
 					required: "Debes escribir tu nombre."
+				},
+				tel: {
+					required: "Debes escribir tu teléfono."
 				},
 				email: {
 					required: "Debes indicarnos tu correo.",
@@ -252,32 +255,33 @@
 			,
 			submitHandler: function(form) {
 				var result;
-				$(form).ajaxSubmit({
-					type: "POST",
-					url: "http://contact_mailer.handband.cl",
-					success: function(msg) {
-						console.log("success!")
-						console.log(msg)
-						if (msg == 'OK') {
-							result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
-							$('#contact-form').clearForm();
-						} else {
-							result = '<div class="alert error"><i class="fa fa-times-circle"></i>' + msg + '</div>';
-						}
-						$("#formstatus").html(result);
+				console.log(form);
+				// $(form).ajaxSubmit({
+				// 	type: "POST",
+				// 	url: "http://contact_mailer.handband.cl",
+				// 	success: function(msg) {
+				// 		console.log("success!")
+				// 		console.log(msg)
+				// 		if (msg == 'OK') {
+				// 			result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
+				// 			$('#contact-form').clearForm();
+				// 		} else {
+				// 			result = '<div class="alert error"><i class="fa fa-times-circle"></i>' + msg + '</div>';
+				// 		}
+				// 		$("#formstatus").html(result);
 
-					},
-					error: function(error) {
-						if(error.status==200){
-							result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
-							$('#contact-form').clearForm();
-						}else{
-							result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
-						}
-						$("#formstatus").html(result);
+				// 	},
+				// 	error: function(error) {
+				// 		if(error.status==200){
+				// 			result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
+				// 			$('#contact-form').clearForm();
+				// 		}else{
+				// 			result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
+				// 		}
+				// 		$("#formstatus").html(result);
 
-					}
-				});
+				// 	}
+				// });
 			}
 		});
 
