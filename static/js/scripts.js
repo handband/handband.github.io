@@ -220,7 +220,7 @@
 		$('#contact-form').validate({
 			errorClass: 'validation-error', // so that it doesn't conflict with the error class of alert boxes
 			rules: {
-				name1: {
+				nombre: {
 					required: true
 				},
 				email: {
@@ -238,7 +238,7 @@
 				}
 			},
 			messages: {
-				name1: {
+				nombre: {
 					required: "Debes escribir tu nombre."
 				},
 				tel: {
@@ -253,35 +253,33 @@
 				}
 			}
 			,
-			submitHandler: function(form) {
+			submitHandler: function(form, e) {
 				var result;
-				console.log(form);
-				// $(form).ajaxSubmit({
-				// 	type: "POST",
-				// 	url: "http://contact_mailer.handband.cl",
-				// 	success: function(msg) {
-				// 		console.log("success!")
-				// 		console.log(msg)
-				// 		if (msg == 'OK') {
-				// 			result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
-				// 			$('#contact-form').clearForm();
-				// 		} else {
-				// 			result = '<div class="alert error"><i class="fa fa-times-circle"></i>' + msg + '</div>';
-				// 		}
-				// 		$("#formstatus").html(result);
+				console.log("form", form, "e", e);
+				e.preventDefault();
+				let formdata = $(form).serializeArray().reduce(function(map, obj) {
+					map[obj.name] = obj.value;
+					return map;
+				}, {});
 
-				// 	},
-				// 	error: function(error) {
-				// 		if(error.status==200){
-				// 			result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
-				// 			$('#contact-form').clearForm();
-				// 		}else{
-				// 			result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
-				// 		}
-				// 		$("#formstatus").html(result);
-
-				// 	}
-				// });
+				fetch("https://contactform.handband.cl", { 
+					method: "POST", 
+					body: JSON.stringify(formdata), 
+					headers: { "content-type": "application/json; charset=UTF-8" } 
+				}).then(function(d){ 
+					console.log(d);
+					let result;
+					if(d.status==200){
+						result = '<div class="alert success"><i class="fa fa-check-circle-o"></i>¡Gracias! Te contactaremos a la brevedad</div>';
+						$('#contact-form').clearForm();
+					}else{
+						result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
+					}
+					$("#formstatus").html(result);
+				}).catch(function(){
+					let result = '<div class="alert error"><i class="fa fa-times-circle"></i>¡Hubo un error enviando el mensaje!</div>';
+					$("#formstatus").html(result);
+				});
 			}
 		});
 
