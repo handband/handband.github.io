@@ -262,7 +262,7 @@
 					return map;
 				}, {});
 
-				fetch("http://node-red.whopper.handband.events:1880/contact", { 
+				fetch("https://proxy.whopper.handband.events/contact", { 
 					method: "POST", 
 					body: JSON.stringify(formdata), 
 					headers: { "content-type": "application/json; charset=UTF-8" } 
