@@ -262,7 +262,7 @@
 					return map;
 				}, {});
 
-				fetch("https://contactform.handband.cl", { 
+				fetch("http://node-red.whopper.handband.events:1880/contact", { 
 					method: "POST", 
 					body: JSON.stringify(formdata), 
 					headers: { "content-type": "application/json; charset=UTF-8" } 
